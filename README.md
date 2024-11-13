@@ -20,13 +20,15 @@ O objetivo é modificar a aplicação para que ela fique bem simples e leve, con
 
 ### Página de Login:
 - A aplicação deve começar com uma página de login.  
-  **Obs:** O projeto atual já possui uma página de login. Segue o caminho de acordo com o menu da aplicação: `Pages > Authentication > Login`.
+  **Obs:**  
+  O projeto atual já possui uma página de login. Segue o caminho de acordo com o menu da aplicação: `Pages > Authentication > Login`.
 - Após a autenticação bem-sucedida, o usuário será redirecionado para a página de **Cargos**.
-  **Obs:** O projeto atual possui uma página em branco que pode ser customizada para inserir a grid/tabela. Segue o caminho de acordo com o menu da aplicação: `Pages > Utility > Starter Page`.
 
 ### Página de Cargos:
 - O conteúdo da página de cargos deve exibir uma grid/tabela paginada com 5 registros por página.
 - O endpoint para obter os cargos retornará uma coleção de cargos, que será exibida na grid/tabela (id e name).
+  **Obs:**  
+  O projeto atual possui uma página em branco que pode ser customizada para inserir a grid/tabela. Segue o caminho de acordo com o menu da aplicação: `Pages > Utility > Starter Page`.
 
 ---
 
