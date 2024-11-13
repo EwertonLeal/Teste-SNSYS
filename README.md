@@ -6,7 +6,7 @@ Este é o repositório do seu projeto de avaliação.
 
 ## Instruções:
 
-1. **Clone ou faça um fork** deste repositório para sua conta pessoal no GitLab.
+1. **Clone ou faça um fork** deste repositório para o seu repositório git publico.
 2. **Desenvolva o teste** conforme as instruções abaixo.
 3. Após a finalização, **envie o link do seu repositório** via WhatsApp para o recrutador que entrou em contato com você.
 
@@ -70,12 +70,3 @@ Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint
           }
       ]
   }
-
-## Requisitos:
-
-- A grid deve exibir **5 cargos por página**.
-- Certifique-se de que a navegação na grid funcione corretamente com a paginação.
-- O layout e design da página podem ser ajustados conforme sua necessidade, mas a funcionalidade descrita deve ser atendida.
-
-## Entrega:
-Após concluir o desenvolvimento, envie o link do seu repositório para o recrutador via WhatsApp. Certifique-se de que o código esteja devidamente comitado e pronto para revisão.
