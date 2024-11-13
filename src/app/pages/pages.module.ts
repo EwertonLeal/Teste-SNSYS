@@ -18,13 +18,13 @@ import { UIModule } from '../shared/ui/ui.module';
 
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { PagesRoutingModule } from './pages-routing.module';
-import { UtilityModule } from './utility/utility.module';
 import { IconsModule } from './icons/icons.module';
 import { HttpClientModule} from '@angular/common/http';
+import { DashboardComponent } from './dashboard.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -35,7 +35,6 @@ import { HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     UIModule,
-    UtilityModule,
     IconsModule,
     WidgetModule,
     FullCalendarModule,

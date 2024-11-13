@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-starter',
-  templateUrl: './starter.component.html',
-  styleUrls: ['./starter.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
 
 /**
  * Utility starter component
  */
-export class StarterComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 

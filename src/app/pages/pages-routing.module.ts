@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { StarterComponent } from './utility/starter/starter.component';
+import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: StarterComponent
+    component: DashboardComponent
   },
-  { path: 'dashboard', component: StarterComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({
