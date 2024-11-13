@@ -1,25 +1,51 @@
-# Skote -  Angular 13 Responsive Admin Dashboard Template 
+# Teste de Avaliação - Projeto Frontend
 
-## Development server
+**Bem-vindo!**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este é o repositório do seu projeto de avaliação. 
 
-## Code scaffolding
+## Instruções:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone ou faça um fork** deste repositório para sua conta pessoal no GitLab.
+2. **Desenvolva o teste** conforme as instruções abaixo.
+3. Após a finalização, **envie o link do seu repositório** via WhatsApp para o recrutador que entrou em contato com você.
 
-## Build
+## Objetivo do Teste:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+O objetivo é modificar a aplicação para que ela inicie com uma página de login. Após a autenticação, o usuário será redirecionado para uma página contendo um menu à esquerda e uma grid de **Cargos**.
 
-## Running unit tests
+## Passos a seguir:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 1. Página de Login:
+- A aplicação deve começar com uma página de login.
+- Após a autenticação bem-sucedida, o usuário será redirecionado para o menu, que deve ter uma única opção visível: **Cargos**.
 
-## Running end-to-end tests
+### 2. Página de Cargos:
+- O conteúdo da página de cargos deve exibir uma grid paginada com 5 registros por página.
+- O endpoint para obter os cargos retornará uma lista, que será exibida na grid.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Endpoints:
 
-## Further help
+### 1. Autenticação:
+Para autenticar o usuário e receber o **Bearer Token**, utilize o seguinte endpoint:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- **Endpoint**:  
+  `[POST] https://dev-erp.haup.com.br/api/v1/auth/login`
+  
+- **Payload**:  
+  ```json
+  {
+      "email": "candidato@snsys.com.br",
+      "password": "angular"
+  }
+ 
+### 2. Obter Cargos:
+
+Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid de cargos deve ser exibida conforme os dados retornados.
+
+- **Endpoint**:  
+  `[POST] https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll`
+
+- **Payload**:
+
+  **Cabeçalho**:
