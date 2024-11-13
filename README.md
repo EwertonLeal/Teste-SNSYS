@@ -2,7 +2,7 @@
 
 ## Bem-vindo!
 
-Este é o repositório do seu projeto de avaliação.
+Este é o repositório do projeto que precisará ser modificado conforme instruções recebida durante a entrevista.
 
 ### Instruções:
 1. Clone ou faça um fork deste repositório para sua conta pessoal.
@@ -20,12 +20,13 @@ O objetivo é modificar a aplicação para que ela fique bem simples e leve, con
 
 ### Página de Login:
 - A aplicação deve começar com uma página de login.  
-  **Obs:** Esse projeto já possui uma página de login. Segue o caminho de acordo com o menu à esquerda: `Pages > Authentication > Login` (use essa página).
+  **Obs:** Esse projeto já possui uma página de login. Segue o caminho de acordo com o menu da aplicação: `Pages > Authentication > Login`.
 - Após a autenticação bem-sucedida, o usuário será redirecionado para a página de **Cargos**.
+  **Obs:** Esse projeto possui uma página em branco que pode ser customizada para inserir a gridtTabela. Segue o caminho de acordo com o menu da aplicação: `Pages > Utility > Starter Page`.
 
 ### Página de Cargos:
-- O conteúdo da página de cargos deve exibir uma grid paginada com 5 registros por página.
-- O endpoint para obter os cargos retornará uma coleção de cargos, que será exibida na grid (id e name).
+- O conteúdo da página de cargos deve exibir uma grid/tabela paginada com 5 registros por página.
+- O endpoint para obter os cargos retornará uma coleção de cargos, que será exibida na grid/tabela (id e name).
 
 ---
 
@@ -46,7 +47,7 @@ Para autenticar o usuário e receber o Bearer Token, utilize o seguinte endpoint
     ```
 
 ### Obter Cargos:
-Após autenticar-se, utilize o Bearer Token recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid de cargos deve ser exibida conforme os dados retornados.
+Após autenticar-se, utilize o Bearer Token recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid/tabela de cargos deve ser exibida conforme os dados retornados.
 
 - **Endpoint:**  
   `POST` https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll
@@ -71,7 +72,7 @@ Após autenticar-se, utilize o Bearer Token recebido para acessar o endpoint pro
     }
     ```
 
-A resposta desse endpoint conterá os cargos que deverão ser exibidos na grid.
+A resposta desse endpoint conterá os cargos que deverão ser exibidos na grid/tabela.
 
 ---
 
