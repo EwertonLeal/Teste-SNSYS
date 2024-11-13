@@ -32,7 +32,10 @@ Para autenticar o usuário e receber o **Bearer Token**, utilize o seguinte endp
 - **Endpoint**:  
   `[POST] https://dev-erp.haup.com.br/api/v1/auth/login`
   
-- **Payload**:  
+- **Payload**: 
+
+  **Body**:
+
   ```json
   {
       "email": "candidato@snsys.com.br",
@@ -44,30 +47,32 @@ Para autenticar o usuário e receber o **Bearer Token**, utilize o seguinte endp
 Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid de cargos deve ser exibida conforme os dados retornados.
 
 ## Endpoint:
-[POST] https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll
+  [POST] https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll
 
-**Payload:**
+  **Payload:**
 
-**Header:**
-Authorization: Bearer {Token}
+  **Header:**
+  Authorization: Bearer {Token}
 
-**Body**:
-```json
-{
-    "page": 1,
-    "size": 5,
-    "columName": "",
-    "columnOrder": "",
-    "filters": [
-        {
-            "type": "",
-            "key": "",
-            "value": ""
-        }
-    ]
-}
+  **Body**:
+
+  ```json
+  {
+      "page": 1,
+      "size": 5,
+      "columName": "",
+      "columnOrder": "",
+      "filters": [
+          {
+              "type": "",
+              "key": "",
+              "value": ""
+          }
+      ]
+  }
 
 ## Requisitos:
+
 - A grid deve exibir **5 cargos por página**.
 - Certifique-se de que a navegação na grid funcione corretamente com a paginação.
 - O layout e design da página podem ser ajustados conforme sua necessidade, mas a funcionalidade descrita deve ser atendida.
