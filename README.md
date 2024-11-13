@@ -12,8 +12,7 @@ Este é o repositório do seu projeto de avaliação.
 ---
 
 ## Objetivo do Teste:
-O objetivo é modificar a aplicação para que ela fique bem simples, deixando ela apenas com duas páginas (autenticação e Cargos)
- Após a autenticação, o usuário será redirecionado para uma página contendo um menu à esquerda e uma grid de **Cargos**.
+O objetivo é modificar a aplicação para que ela fique bem simples e leve, contendo apenas duas páginas (Login e Cargos). A página de login irá consumir o endpoint de autentiação, a pagian de cargos irá consumir o endpoint (protegido) que trás a relação de cargos. 
 
 ---
 
@@ -22,11 +21,13 @@ O objetivo é modificar a aplicação para que ela fique bem simples, deixando e
 ### Página de Login:
 - A aplicação deve começar com uma página de login.
     Obs: Esse projeto já possui uma página de login, segue o caminho de acordo com o menu a esquerda: Pages>Autentication>Login (use essa página)
-- Após a autenticação bem-sucedida, o usuário será redirecionado para a aplicação, sem nenh que deve ter uma única opção visível: **Cargos**.
+- Após a autenticação bem-sucedida, o usuário será redirecionado para a página de cargos.
+
+ **Cargos**.
 
 ### Página de Cargos:
 - O conteúdo da página de cargos deve exibir uma grid paginada com 5 registros por página.
-- O endpoint para obter os cargos retornará uma lista, que será exibida na grid.
+- O endpoint para obter os cargos retornará uma coleção de cargos, que será exibida na grid (id e name).
 
 ---
 
