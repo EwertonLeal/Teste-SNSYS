@@ -41,13 +41,13 @@ Para autenticar o usuário e receber o **Bearer Token**, utilize o seguinte endp
       "email": "candidato@snsys.com.br",
       "password": "angular"
   }
-
 ### 2. Obter Cargos:
+
 
 Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid de cargos deve ser exibida conforme os dados retornados.
 
 ## Endpoint:
-  [POST] https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll
+  `[POST] https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll
 
   **Payload:**
 
