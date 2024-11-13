@@ -7,13 +7,9 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { StarterComponent } from './starter/starter.component';
-import { TimelineComponent } from './timeline/timeline.component';
-import { FaqsComponent } from './faqs/faqs.component';
-import { PricingComponent } from './pricing/pricing.component';
-
 
 @NgModule({
-  declarations: [StarterComponent, TimelineComponent, FaqsComponent, PricingComponent],
+  declarations: [StarterComponent],
   imports: [
     CommonModule,
     UtiliytRoutingModule,
