@@ -1,10 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
-import { EventService } from '../../core/services/event.service';
-
-import { SIDEBAR_TYPE } from "../layouts.model";
-
 @Component({
   selector: 'app-vertical',
   templateUrl: './vertical.component.html',
@@ -19,7 +15,7 @@ export class VerticalComponent implements OnInit, AfterViewInit {
   isCondensed:any = false;
   // sidebartype: string;
 
-  constructor(private router: Router, private eventService: EventService) {
+  constructor(private router: Router) {
     this.router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         document.body.classList.remove('sidebar-enable');
