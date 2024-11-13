@@ -48,7 +48,7 @@ Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint
 
 **Payload:**
 
-### Header:
+**Header:**
 Authorization: Bearer {Token}
 
 **Body**:
