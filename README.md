@@ -38,7 +38,7 @@ Para autenticar o usuário e receber o **Bearer Token**, utilize o seguinte endp
       "email": "candidato@snsys.com.br",
       "password": "angular"
   }
- 
+
 ### 2. Obter Cargos:
 
 Após autenticar-se, utilize o **Bearer Token** recebido para acessar o endpoint protegido que retorna a lista de cargos. A grid de cargos deve ser exibida conforme os dados retornados.
@@ -71,3 +71,6 @@ Authorization: Bearer {Token}
 - A grid deve exibir **5 cargos por página**.
 - Certifique-se de que a navegação na grid funcione corretamente com a paginação.
 - O layout e design da página podem ser ajustados conforme sua necessidade, mas a funcionalidade descrita deve ser atendida.
+
+## Entrega:
+Após concluir o desenvolvimento, envie o link do seu repositório para o recrutador via WhatsApp. Certifique-se de que o código esteja devidamente comitado e pronto para revisão.
