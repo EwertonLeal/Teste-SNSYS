@@ -12,7 +12,7 @@ Este é o repositório do seu projeto de avaliação.
 ---
 
 ## Objetivo do Teste:
-O objetivo é modificar a aplicação para que ela fique bem simples e leve, contendo apenas duas páginas (Login e Cargos). A página de login irá consumir o endpoint de autentiação, a pagian de cargos irá consumir o endpoint (protegido) que trás a relação de cargos. 
+O objetivo é modificar a aplicação para que ela fique bem simples e leve, contendo apenas duas páginas (Login e Cargos). A página de login irá consumir o endpoint de autenticação, a pagian de cargos irá consumir o endpoint que trás a relação de cargos. 
 
 ---
 
