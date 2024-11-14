@@ -1,66 +1,35 @@
-import { Injectable } from '@angular/core';
-
-import { getFirebaseBackend } from '../../authUtils';
-
-import { User } from '../models/auth.models';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { AuthModel } from '../models/auth.models';
 
 @Injectable({ providedIn: 'root' })
 
 export class AuthenticationService {
+    tokenKey: string = "KEY";
 
-    user: User;
+    private aptUrl = environment.authUrl;
+    private http = inject(HttpClient);
 
-    constructor() {
+    auth(email: string, password: string): Observable<AuthModel> {
+        return this.http.post<AuthModel>(this.aptUrl, { email, password })
+            .pipe(
+                tap((response: AuthModel) => this.storeToken(response.content))
+            )
     }
 
-    /**
-     * Returns the current user
-     */
-    public currentUser(): User {
-        return getFirebaseBackend().getAuthenticatedUser();
-    }
-
-    /**
-     * Performs the auth
-     * @param email email of user
-     * @param password password of user
-     */
-    login(email: string, password: string) {
-        return getFirebaseBackend().loginUser(email, password).then((response: any) => {
-            const user = response;
-            return user;
-        });
-    }
-
-    /**
-     * Performs the register
-     * @param email email
-     * @param password password
-     */
-    register(email: string, password: string) {
-        return getFirebaseBackend().registerUser(email, password).then((response: any) => {
-            const user = response;
-            return user;
-        });
-    }
-
-    /**
-     * Reset password
-     * @param email email
-     */
-    resetPassword(email: string) {
-        return getFirebaseBackend().forgetPassword(email).then((response: any) => {
-            const message = response.data;
-            return message;
-        });
-    }
-
-    /**
-     * Logout the user
-     */
     logout() {
-        // logout the user
-        getFirebaseBackend().logout();
+        localStorage.removeItem(this.tokenKey);
     }
+
+    getToken(): string | null {
+        return localStorage.getItem(this.tokenKey);
+    }
+
+    private storeToken(token: string): void {
+        localStorage.setItem(this.tokenKey, token);
+    }
+
 }
 

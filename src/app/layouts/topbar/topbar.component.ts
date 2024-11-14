@@ -25,11 +25,13 @@ export class TopbarComponent implements OnInit {
   countryName:any;
   valueset:any;
 
-  constructor(@Inject(DOCUMENT) private document: any, private router: Router, private authService: AuthenticationService,
-              private authFackservice: AuthfakeauthenticationService,
-              public languageService: LanguageService,
-              public translate: TranslateService,
-              public _cookiesService: CookieService) {
+  constructor(
+    @Inject(DOCUMENT) private document: any, 
+    private router: Router, 
+    private authService: AuthenticationService,
+    public languageService: LanguageService,
+    public translate: TranslateService,
+    public _cookiesService: CookieService) {
   }
 
   listLang:any = [
@@ -59,43 +61,18 @@ export class TopbarComponent implements OnInit {
     }
   }
 
-    setLanguage(text: string, lang: string, flag: string) {
+  setLanguage(text: string, lang: string, flag: string) {
       this.countryName = text;
       this.flagvalue = flag;
       this.cookieValue = lang;
       this.languageService.setLanguage(lang);
-    }
-
-  /**
-   * Toggles the right sidebar
-   */
-  toggleRightSidebar() {
-    this.settingsButtonClicked.emit();
   }
 
-  /**
-   * Toggle the menu bar when having mobile screen
-   */
-  toggleMobileMenu(event: any) {
-    event.preventDefault();
-    this.mobileMenuButtonClicked.emit();
-  }
-
-  /**
-   * Logout the user
-   */
   logout() {
-    if (environment.defaultauth === 'firebase') {
-      this.authService.logout();
-    } else {
-      this.authFackservice.logout();
-    }
+    this.authService.logout();
     this.router.navigate(['/account/login']);
   }
-
-  /**
-   * Fullscreen method
-   */
+  
   fullscreen() {
     document.body.classList.toggle('fullscreen-enable');
     if (

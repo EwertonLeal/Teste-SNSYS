@@ -19,7 +19,7 @@ import { AuthRoutingModule } from './auth-routing';
     AlertModule.forRoot(),
     UIModule,
     AuthRoutingModule,
-    CarouselModule
+    CarouselModule,
   ]
 })
 export class AuthModule { }
