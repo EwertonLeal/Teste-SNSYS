@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
-import { environment } from '../environments/environment';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -22,6 +21,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -51,6 +51,7 @@ export function createTranslateLoader(http: HttpClient): any {
     TooltipModule.forRoot(),
     ScrollToModule.forRoot(),
     ToastrModule.forRoot(),
+    NgbModule,
   ],
   bootstrap: [AppComponent],
   providers: [

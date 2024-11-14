@@ -12,6 +12,9 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
+collectionSize: any;
+page: any;
+pageSize: any;
 
   constructor() { }
 
