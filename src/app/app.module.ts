@@ -19,7 +19,6 @@ import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -54,8 +53,6 @@ export function createTranslateLoader(http: HttpClient): any {
     NgbModule,
   ],
   bootstrap: [AppComponent],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-  ],
+  providers: [],
 })
 export class AppModule { }

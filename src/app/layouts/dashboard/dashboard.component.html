@@ -1,25 +1,39 @@
 <div class="container-fluid">
-        <table class="table table-striped">
-                <thead>
-                <tr>
-                  <th scope="col">#Id</th>
-                  <th scope="col">Cargo</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">001</th>
-                  <td>Nome</td>
-                </tr>
-                </tbody>
-              </table>
-              
-              <div class="d-flex justify-content-between p-2">
-                <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
-                </ngb-pagination>
-              
-                <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
-                  <option [ngValue]="2">2 items per page</option>
-                </select>
-              </div>
+  
+  <form>
+    <div class="mb-3 d-flex align-items-center gap-4">
+      <h2>
+        <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Busque pelo cargo</label>
+      </h2>
+
+      <div class="col-xs-6 col-sm-auto">
+        <input #searchPosition placeholder="Ex. DBA" class="form-control" type="text" />
+      </div>
+    </div>
+  </form>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#Id</th>
+        <th scope="col">Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let position of positionsArray">
+        <th scope="row">{{ position.id }}</th>
+        <td>{{ position.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="onPageChange($event)"></ngb-pagination>
+
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (change)="onPageSizeChange()">
+      <option [ngValue]="5">5 items por página</option>
+      <option [ngValue]="10">10 items por página</option>
+      <option [ngValue]="15">15 items por página</option>
+    </select>
+  </div>
 </div>

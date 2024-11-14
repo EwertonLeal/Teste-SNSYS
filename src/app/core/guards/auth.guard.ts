@@ -17,7 +17,6 @@ export class AuthGuard  {
             return true;
         }
 
-        this.router.navigate(['/']);
         return false;
     }
 }

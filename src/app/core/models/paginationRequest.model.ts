@@ -5,5 +5,5 @@ export interface PaginationRequest {
     size: number;
     columName: string;
     columnOrder: string;
-    filters: Filter;
+    filters: Filter[];
   }
