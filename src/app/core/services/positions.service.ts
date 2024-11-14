@@ -22,7 +22,7 @@ export class PositionsService {
       'Authorization': `Bearer ${this.authService.getToken()}`,
     });
 
-    return this.http.post<ApiResponse>("https://dev-erp.haup.com.br/api/v3/settings/UserPosition/GetAll", filter, { headers: headers })
+    return this.http.post<ApiResponse>(this.aptUrl, filter, { headers: headers })
   }
 
 }
