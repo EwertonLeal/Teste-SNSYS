@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './core/guards/auth.guard';
-import { LayoutComponent } from './layouts/layout.component';
 import { Page404Component } from './extrapages/page404/page404.component';
 import { LoginGuard } from './core/guards/login.guard';
 
