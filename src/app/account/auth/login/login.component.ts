@@ -1,15 +1,12 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { AuthenticationService } from '../../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, first, takeUntil } from 'rxjs/operators';
+import { catchError, takeUntil } from 'rxjs/operators';
 
-import { environment } from '../../../../environments/environment';
 import { EMPTY, Subject } from 'rxjs';
-import { preventDefault } from '@fullcalendar/core/internal';
 
 @Component({
   selector: 'app-login',

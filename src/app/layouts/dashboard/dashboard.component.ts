@@ -6,15 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 
-/**
- * Utility starter component
- */
 export class DashboardComponent implements OnInit {
-  // bread crumb items
+
   breadCrumbItems: Array<{}>;
-collectionSize: any;
-page: any;
-pageSize: any;
+  collectionSize: any;
+  page: any;
+  pageSize: any;
 
   constructor() { }
 

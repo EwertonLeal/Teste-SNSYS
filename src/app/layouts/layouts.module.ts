@@ -12,9 +12,11 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LayoutRoutingModule } from './layout-routing';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-  // tslint:disable-next-line: max-line-length
   declarations: [LayoutComponent, TopbarComponent, FooterComponent, VerticalComponent, DashboardComponent],
   imports: [
     CommonModule,
@@ -23,7 +25,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    LayoutRoutingModule,
+    NgbDropdownModule
   ],
   providers: [LanguageService]
 })

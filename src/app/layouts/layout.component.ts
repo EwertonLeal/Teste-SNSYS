@@ -1,8 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-import {
-  LAYOUT_VERTICAL, LAYOUT_HORIZONTAL, LAYOUT_WIDTH, TOPBAR, LAYOUT_MODE, SIDEBAR_TYPE
-} from './layouts.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layout',

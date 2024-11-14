@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IconsRoutingModule } from './icons-routing.module';
-import { UIModule } from '../../shared/ui/ui.module';
 
 import { BoxiconsComponent } from './boxicons/boxicons.component';
 import { MaterialdesignComponent } from './materialdesign/materialdesign.component';
@@ -14,7 +13,6 @@ import { FontawesomeComponent } from './fontawesome/fontawesome.component';
   imports: [
     CommonModule,
     IconsRoutingModule,
-    UIModule
   ]
 })
 export class IconsModule { }
