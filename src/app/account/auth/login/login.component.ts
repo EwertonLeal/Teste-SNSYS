@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, takeUntil } from 'rxjs/operators';
 
 import { EMPTY, Subject } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute, 
     private router: Router, 
     private authenticationService: AuthenticationService,
+    public toastr: ToastrService
   ) { }
 
   ngOnInit() {
@@ -63,7 +65,14 @@ export class LoginComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroy$),
         catchError(err => {
-          this.error = "Usuário ou Senha incorretos!";
+          this.toastr.error(
+            'Login ou senha inválidos!', 
+            'Não foi possivel logar', 
+            { 
+              timeOut: 6000,
+              positionClass: 'toast-center-center' 
+            }
+          );
           return EMPTY;
       })
       ).subscribe({

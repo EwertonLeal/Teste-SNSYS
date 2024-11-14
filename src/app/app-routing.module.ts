@@ -7,7 +7,7 @@ import { LoginGuard } from './core/guards/login.guard';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./account/auth/auth.module').then(m => m.AuthModule), canActivate: [LoginGuard] },
-  { path: 'dashboard', loadChildren: () => import('./layouts/layouts.module').then(l => l.LayoutsModule), canActivate: [AuthGuard] },
+  { path: 'dashboard', loadChildren: () => import('./layouts/layouts.module').then(l => l.LayoutsModule) },
   { path: '**', component: Page404Component },
 ];
 
